@@ -1,5 +1,5 @@
 # SpringBoot-Dec22
-Spring Boot Bootcamp at Tuwaig Academy
+Spring Boot Boot Camp at Tuwaiq Academy
 
-This is to submit assignments for review.
+This repo is used to submit assignments for review.
 
