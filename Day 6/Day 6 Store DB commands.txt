@@ -1,4 +1,6 @@
+
 #DDL
+#Create database named 'store' then chose the database from the console window to run the below commands and producde the Visualized Diagram of the DB.
 create table countries(
     code int primary key,
     name varchar(20) unicode,
