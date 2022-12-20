@@ -1,0 +1,41 @@
+package com.day7.Day7.exercise.Service;
+
+import com.day7.Day7.exercise.Model.User;
+import com.day7.Day7.exercise.Repo.UserRepo;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+@RequiredArgsConstructor
+public class UserService {
+    private final UserRepo users;
+
+    public List<User> getAll(){
+        return users.findAll();
+    };
+
+    public void addUser(User user){
+        users.save(user);
+    }
+
+
+    public boolean isUser(Integer id) {
+        List<User> currentUsers = users.findAll();
+        for (User user : currentUsers) {
+            if (user.getId()==id)
+                return true;
+        }
+        return false;
+    }
+
+    public void updateUser(Integer id,User user) {
+        users.findAll().set(id,user);
+    }
+
+    public void deleteUser(Integer id) {
+        users.findAll().remove(id);
+    }
+}
