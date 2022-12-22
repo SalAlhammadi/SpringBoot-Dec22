@@ -1,0 +1,47 @@
+Pizza Store API:
+
+
+Classes:
+ 
+- Pizza [Toppings{Pepporini, Pineapple, Chicken, Meat, Cheese} - Dough types{Thick, Thin} - Size{Small, Medium, Large}]
+
+- Users [Name, email(unique), phone#(unique)]
+	Children specifications:
+	 -Customer (Bill ID List, total payments in store)
+	 -Cashier (Admin ID, Customer ID List, date of hiring, total sales(summation of total of payments of customers registered to Cashier) 
+	 -Admin (Cashier(s) List, fire/hire cashier, higher clearance of report generating)
+
+	Customer requirements:
+	 -get status of order
+ 
+- Drinks [Soda{Cola, Citrus, Shani}, Water]
+
+- Items (ID, price)
+
+- Order [items(pizza, drinks), Date, Customer ID, Cashier ID(optional) ]
+
+
+Endpoints[Count]:
+1- CRUD for Users                      [8]
+2- CRUD for Pizza                      [4]
+3- CRUD for Customers                  [4]
+4- CRUD for Orders                     [4]
+4- get bills by total price over x     [1]
+5- get bills by date between two dates [1]
+6- get menu with all options           [1]
+7- get trending Pizza orders           [1]         //Will get number the pizza options that has the most sales 
+8- get Most Valuable Customers         [1] 	       //Who paid the most or who has higher number of bills.
+
+Total endpoints:                       [25]
+
+
+
+
+
+
+
+
+ 
+
+
+
